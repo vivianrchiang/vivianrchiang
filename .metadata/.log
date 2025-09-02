@@ -1,0 +1,65 @@
+!SESSION 2025-09-01 14:42:45.318 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring -data /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:42:46.689
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:42:47.709
+!MESSAGE Logback config file: /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml
+!SESSION 2025-09-01 14:43:16.703 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring -data /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:43:17.856
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:43:18.833
+!MESSAGE Logback config file: /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml
+!SESSION 2025-09-01 14:43:37.179 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring -data /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:43:38.385
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:43:39.622
+!MESSAGE Logback config file: /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml
+!SESSION 2025-09-01 14:44:16.647 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring -data /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:44:17.589
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:44:18.500
+!MESSAGE Logback config file: /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml
+!SESSION 2025-09-01 14:44:37.422 -----------------------------------------------
+eclipse.buildId=4.36.0.20250605-1300
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/vivianchiang/.eclipse_keyring -data /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:44:38.594
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-01 14:44:39.505
+!MESSAGE Logback config file: /Users/vivianchiang/Documents/School/UPenn Masters/CIS 5550/Homework/vivianrchiang/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml
