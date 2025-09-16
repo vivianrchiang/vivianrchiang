@@ -17,5 +17,6 @@ public class HW2TestServer {
     get("/error", (req,res) -> { res.body("Should not show up!"); throw new Exception("Exception thrown on purpose (for testing)"); });
     get("/write", (req,res) -> { res.header("X-Bar", "present"); res.write("Hello ".getBytes()); res.write("World!".getBytes()); return null; });
     get("/qparam", (req,res) -> { return req.queryParams("par1")+","+req.queryParams("par2")+","+req.queryParams("par3")+","+req.queryParams("par4"); });
+    Thread.sleep(Long.MAX_VALUE);
   }
 }

@@ -1,4 +1,3 @@
-
 package cis5550.webserver;
 
 import java.io.*;
@@ -53,7 +52,6 @@ public class Server implements Runnable {
     if (!STARTED) {
       STARTED = true;
       Thread t = new Thread(INSTANCE, "cis5550-webserver");
-      t.setDaemon(true);
       t.start();
       INSTANCE.awaitStarted();
     }
