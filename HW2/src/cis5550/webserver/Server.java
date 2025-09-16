@@ -55,6 +55,14 @@ public class Server implements Runnable {
       Thread t = new Thread(INSTANCE, "cis5550-webserver");
       t.setDaemon(true);
       t.start();
+      INSTANCE.awaitStarted();
+    }
+  }
+
+  private void awaitStarted() {
+    try {
+      startedLatch.await(3, java.util.concurrent.TimeUnit.SECONDS);
+    } catch (InterruptedException ie) {
     }
   }
 
@@ -62,6 +70,7 @@ public class Server implements Runnable {
   private String staticDir = null;
   private volatile boolean shutdown = false;
   private final List<RouteEntry> routes = new CopyOnWriteArrayList<>();
+  private final CountDownLatch startedLatch = new CountDownLatch(1);
 
   private Server() {}
 
@@ -70,6 +79,7 @@ public class Server implements Runnable {
     try (ServerSocket ss = new ServerSocket()) {
       ss.setReuseAddress(true);
       ss.bind(new InetSocketAddress(InetAddress.getByName("0.0.0.0"), port));
+      startedLatch.countDown();
       while (!shutdown) {
         try {
           final Socket s = ss.accept();
@@ -79,6 +89,7 @@ public class Server implements Runnable {
         }
       }
     } catch (IOException e) {
+      startedLatch.countDown();
     }
   }
 
