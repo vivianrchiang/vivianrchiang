@@ -451,7 +451,7 @@ public class Server implements Runnable {
     }
     public String protocol() { return protocol; }
 
-    public long contentLength() { return bodyRaw.length; }
+    public int contentLength() { return bodyRaw.length; }
     public byte[] bodyAsBytes() { return Arrays.copyOf(bodyRaw, bodyRaw.length); }
     public String body() { return new String(bodyRaw, StandardCharsets.ISO_8859_1); }
 
