@@ -411,7 +411,8 @@ public class Server implements Runnable {
     final String url;
     final String protocol;
     final InetSocketAddress remoteAddr;
-    final Map<String,String> headers;
+    final Map<String,String> headersRaw;
+    final Map<String,String> headersLower;
     final Map<String,String> queryParams;
     final Map<String,String> params;
     final byte[] bodyRaw;
@@ -424,9 +425,13 @@ public class Server implements Runnable {
       this.url = url;
       this.protocol = protocol;
       this.remoteAddr = remoteAddr;
-      this.headers = new LinkedHashMap<>();
-      for (Map.Entry<String,String> e : headers.entrySet()) {
-        this.headers.put(e.getKey(), e.getValue());
+      this.headersRaw = new LinkedHashMap<>();
+      this.headersLower = new LinkedHashMap<>();
+      if (headers != null) {
+        for (Map.Entry<String,String> e : headers.entrySet()) {
+          this.headersRaw.put(e.getKey(), e.getValue());
+          this.headersLower.put(e.getKey().toLowerCase(Locale.ROOT), e.getValue());
+        }
       }
       this.queryParams = queryParams != null ? queryParams : new LinkedHashMap<>();
       this.params = params != null ? params : new LinkedHashMap<>();
@@ -438,39 +443,24 @@ public class Server implements Runnable {
     public int port() { return remoteAddr.getPort(); }
 
     public String requestMethod() { return method; }
-    public String url() { 
-      if (queryParams.isEmpty()) return url;
-      StringBuilder sb = new StringBuilder(url).append("?");
-      boolean first=true;
-      for (Map.Entry<String,String> e : queryParams.entrySet()) {
-        if (!first) sb.append("&");
-        first=false;
-        sb.append(encode(e.getKey())).append("=").append(encode(e.getValue()));
-      }
-      return sb.toString();
-    }
+    public String url() { return url; }
     public String protocol() { return protocol; }
 
     public int contentLength() { return bodyRaw.length; }
     public byte[] bodyAsBytes() { return Arrays.copyOf(bodyRaw, bodyRaw.length); }
     public String body() { return new String(bodyRaw, StandardCharsets.ISO_8859_1); }
 
-    public Set<String> headers() { return headers.keySet(); }
+    public Set<String> headers() { return headersLower.keySet(); }
     public String headers(String name) {
-      for (Map.Entry<String,String> e : headers.entrySet()) {
-        if (e.getKey().equalsIgnoreCase(name)) return e.getValue();
-      }
-      return null;
+      if (name == null) return null;
+      return headersLower.get(name.toLowerCase(Locale.ROOT));
     }
+    public String contentType() { return headersLower.get("content-type"); }
 
     public String queryParams(String param) { return queryParams.get(param); }
     public Set<String> queryParams() { return queryParams.keySet(); }
 
     public String params(String name) { return params.get(name); }
     public Map<String,String> params() { return params; }
-
-    private String encode(String s) {
-      try { return java.net.URLEncoder.encode(s, "UTF-8"); } catch (Exception e) { return s; }
-    }
   }
 }
